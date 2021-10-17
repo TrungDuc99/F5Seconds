@@ -7,7 +7,6 @@ const IndexPage = () => {
   return (
     <AppLayout_exb>
       <Section1_exb />
-
       <Section12 />
       <Footer_sigin />
     </AppLayout_exb>

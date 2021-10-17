@@ -327,7 +327,9 @@ const Navbar: FC<NavbarProps> = () => {
           }}
         />
         <FlexBox>{renderNestedNav(listMenu, true)}</FlexBox>
-        <Button style={{ backgroundColor: '#fff', color: '#005F92' }}>
+        <Button
+          style={{ backgroundColor: '#fff', color: '#005F92', height: '36px' }}
+        >
           <LockClockIcon style={{ marginRight: '3px' }}></LockClockIcon> Ngân hàng
           trực tuyến
         </Button>

@@ -1,9 +1,9 @@
 import { Box, BoxProps, TextField, TextFieldProps } from '@material-ui/core'
 import { Small } from './Typography'
 
-export interface BazarTextFieldProps {}
+export interface TextFieldIcons_exb {}
 
-const BazarTextField: React.FC<TextFieldProps & BoxProps> = ({
+const TextFieldIcons_exb: React.FC<TextFieldProps & BoxProps> = ({
   label,
   InputProps,
   ...props
@@ -36,10 +36,11 @@ const BazarTextField: React.FC<TextFieldProps & BoxProps> = ({
           style: {
             ...InputProps?.style,
             height: 44,
+            borderRadius: '10px',
           },
         }}
         {...textFieldProps}
-      />
+      ></TextField>
     </Box>
   )
 }
@@ -75,4 +76,4 @@ const spacePropList = [
   'paddingY',
 ]
 
-export default BazarTextField
+export default TextFieldIcons_exb

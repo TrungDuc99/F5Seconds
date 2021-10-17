@@ -1,25 +1,17 @@
-import BazarTextField from '@component/BazarTextField'
+import TextFieldIcons_exb from '@component/TextFieldIcons_exb'
 import { Paragraph } from '@component/Typography'
-import { Box, Container, Grid, styled } from '@material-ui/core'
+import { Box, Container, Grid, IconButton } from '@material-ui/core'
+import ExitToAppIcon from '@material-ui/icons/ExitToApp'
 import React, { FC } from 'react'
 // styled component
-const StyledLink = styled('a')(({ theme }) => ({
-  position: 'relative',
-  display: 'block',
-  padding: '0.3rem 0rem',
-  color: theme.palette.grey[500],
-  cursor: 'pointer',
-  borderRadius: 4,
-
-  '&:hover': {
-    color: theme.palette.grey[100],
-  },
-}))
 
 const Footer_sigin: FC = () => {
+  const handleRegister = () => {
+    console.log('đăng ký')
+  }
   return (
     <footer>
-      <Box bgcolor="#0098CE">
+      <Box bgcolor="#0098CE" id="demosexb">
         <Container sx={{ p: '1rem', color: 'white' }}>
           <Box py={2} overflow="hidden">
             <Grid container spacing={3}>
@@ -43,7 +35,7 @@ const Footer_sigin: FC = () => {
                   alignItems: 'center',
                 }}
               >
-                <BazarTextField
+                <TextFieldIcons_exb
                   style={{
                     background: '#FFFFFF',
                     borderRadius: '10px',
@@ -58,6 +50,17 @@ const Footer_sigin: FC = () => {
                   // value={values.email || ''}
                   // error={!!touched.email && !!errors.email}
                   // helperText={touched.email && errors.email}
+                  InputProps={{
+                    endAdornment: (
+                      <IconButton
+                        size="small"
+                        type="button"
+                        onClick={handleRegister}
+                      >
+                        <ExitToAppIcon style={{ color: '#0098CE' }}></ExitToAppIcon>
+                      </IconButton>
+                    ),
+                  }}
                 />
               </Grid>
             </Grid>

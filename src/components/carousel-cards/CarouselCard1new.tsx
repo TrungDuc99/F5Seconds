@@ -3,6 +3,7 @@ import { Paragraph } from '@component/Typography'
 import { Box, Button, Grid, styled } from '@material-ui/core'
 import ExitToAppIcon from '@material-ui/icons/ExitToApp'
 import React, { FC } from 'react'
+import { Link as Scroll } from 'react-scroll'
 // component props interface
 export interface CarouselCard1Props {
   heading?: string
@@ -66,24 +67,26 @@ const CarouselCard1: FC<CarouselCard1Props> = () => {
             ultricies.
           </Paragraph>
           <div style={{ display: 'flex', alignItems: 'row' }}>
-            <Button
-              className="button-link"
-              variant="contained"
-              disableElevation
-              style={{
-                backgroundColor: '#fff',
-                color: '#0098CE',
-              }}
-              sx={{
-                width: '174px',
-                height: '50px',
-                borderRadius: '10px',
-                marginRight: '10px',
-              }}
-            >
-              Đăng ký ngay
-              <ExitToAppIcon style={{ marginLeft: '5px' }}></ExitToAppIcon>
-            </Button>
+            <Scroll to="demosexb" duration={400} offset={-72 - 16} smooth={true}>
+              <Button
+                className="button-link"
+                variant="contained"
+                disableElevation
+                style={{
+                  backgroundColor: '#fff',
+                  color: '#0098CE',
+                }}
+                sx={{
+                  width: '174px',
+                  height: '50px',
+                  borderRadius: '10px',
+                  marginRight: '10px',
+                }}
+              >
+                Đăng ký ngay
+                <ExitToAppIcon style={{ marginLeft: '5px' }}></ExitToAppIcon>
+              </Button>
+            </Scroll>
             <Button
               variant="outlined"
               style={{
