@@ -70,9 +70,7 @@ const Section12: FC = () => {
                 </H4>
                 <Span textAlign="center" color="grey.600">
                   {item.content} Lorem ipsum dolor sit amet consectetur adipisicing
-                  elit. Eum commodi ducimus sunt excepturi labore rem sed. Iusto
-                  adipisci sed ratione. Accusantium odit natus itaque libero dolorum
-                  vitae deserunt maiores? Nam.
+                  elit.
                 </Span>
                 <Box
                   sx={navLinkStyle}
