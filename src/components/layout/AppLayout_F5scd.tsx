@@ -1,4 +1,5 @@
-import Navbar_f5scd from '@component/navbar/Navbar_f5scd'
+import Footer_f5seconds from '@component/footer/Footer_f5seconds'
+import Header_f5scd from '@component/header/Header_f5scd'
 import Head from 'next/head'
 import React, { FC, Fragment } from 'react'
 type AppLayout_F5scdProps = {
@@ -14,9 +15,12 @@ const AppLayout_F5scd: FC<AppLayout_F5scdProps> = ({ children, navbar }) => {
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Navbar_f5scd />
+      <Header_f5scd />
+
       {navbar && <div className="section-after-sticky">{navbar}</div>}
       {!navbar ? <div className="section-after-sticky">{children}</div> : children}
+
+      <Footer_f5seconds></Footer_f5seconds>
     </Fragment>
   )
 }

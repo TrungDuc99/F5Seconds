@@ -31,6 +31,7 @@
     "clsx": "^1.1.1",
     "date-fns": "^2.22.1",
     "formik": "^2.2.6",
+    "material-timeline": "^1.0.4",
     "next": "^10.2.2",
     "nprogress": "^0.2.0",
     "pure-react-carousel": "^1.27.6",
@@ -40,6 +41,8 @@
     "react-dropzone": "^11.3.2",
     "react-scroll": "^1.8.2",
     "react-simple-image-viewer": "0.0.8",
+    "react-vertical-timeline-component": "^3.5.2",
+    "timeline": "^3.4.1",
     "yup": "^0.32.9"
   },
   "devDependencies": {

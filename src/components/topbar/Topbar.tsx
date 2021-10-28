@@ -88,11 +88,13 @@ const Topbar = () => {
   return (
     <TopbarWrapper>
       <Container
+        
         sx={{
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
           height: '100%',
+          width: '100%',
         }}
       >
         <FlexBox className="topbarLeft" alignItems="center">

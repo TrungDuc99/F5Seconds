@@ -2,7 +2,6 @@ import BazarCard from '@component/BazarCard'
 import BazarImage from '@component/BazarImage'
 import FlexBox from '@component/FlexBox'
 import NavLink from '@component/nav-link/NavLink'
-import { H4 } from '@component/Typography'
 import { Box, Container, MenuItem, styled } from '@material-ui/core'
 import ArrowRight from '@material-ui/icons/ArrowRight'
 import React, { FC } from 'react'
@@ -43,9 +42,9 @@ const ParentNavItem = styled(Box)(() => ({
 }))
 
 const NavBarWrapper = styled(BazarCard)(({ theme }) => ({
-  backgroundColor: '#005F92',
   display: 'block',
-  position: 'relative',
+  position: 'fixed',
+  Width: '100%',
   height: '60px',
   borderRadius: '0px',
   [theme.breakpoints.down('md')]: {
@@ -58,7 +57,6 @@ const InnerContainer = styled(Container)(() => ({
   justifyContent: 'space-between',
   alignItems: 'center',
   position: 'fixed',
-  maxWidth: '100%',
 }))
 
 const Navbar: FC<NavbarProps> = () => {
@@ -315,7 +313,9 @@ const Navbar: FC<NavbarProps> = () => {
 
   return (
     <NavBarWrapper elevation={2} hoverEffect={false}>
-      <InnerContainer sx={{ justifyContent: 'flex-center' }}>
+      <InnerContainer
+        style={{ maxWidth: '100%', display: 'flex', justifyContent: 'center' }}
+      >
         <BazarImage
           src="/assets/images/f5seconds/logo_f5seconds.png"
           alt="hinh-thuong-hieu"
@@ -324,76 +324,9 @@ const Navbar: FC<NavbarProps> = () => {
             maxWidth: 250,
           }}
         />
+        <div style={{ width: '20%' }}></div>
         <FlexBox>{renderNestedNav(listMenu, true)}</FlexBox>
       </InnerContainer>
-      <Box
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          flexDirection: 'row',
-        }}
-      >
-        <BazarImage
-          src="assets/images/f5seconds/banner-header.jpg"
-          alt="hinh-thuong-hieu"
-          sx={{
-            maxHeight: '100%',
-            maxWidth: '100%',
-          }}
-        ></BazarImage>
-
-        <h1
-          style={{
-            fontSize: '6.5rem',
-            lineHeight: '6.5rem',
-            letterSpacing: '0.5rem',
-            margin: 'auto',
-            padding: '10px',
-            color: 'rgba(255, 255, 255, 0.7)',
-            position: 'absolute',
-
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-          }}
-        >
-          F5SECONDS
-        </h1>
-        <h2
-          style={{
-            fontSize: '1.25rem',
-            lineHeight: '6.5rem',
-            letterSpacing: '0.8rem',
-            margin: 'auto',
-            padding: '10px',
-            position: 'absolute',
-            left: '50%',
-            transform: 'translate(-50%, 30%)',
-            color: 'rgba(255, 255, 255, 0.7)',
-          }}
-        >
-          Giải pháp công nghệ 5 giây
-        </h2>
-      </Box>
-      <Box
-        bgcolor="#000000"
-        height="234px"
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          flexDirection: 'row',
-        }}
-      >
-        <H4
-          style={{
-            margin: 'auto',
-            width: '100%',
-            padding: '10px',
-            textAlign: 'center',
-          }}
-        >
-          Copyright © F5seconds 2020
-        </H4>
-      </Box>
     </NavBarWrapper>
   )
 }
